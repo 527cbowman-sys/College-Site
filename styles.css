@@ -1,0 +1,667 @@
+/* ==========================================
+   RESET & GLOBAL STYLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+:root {
+  --umd-red: #E21833;
+  --umd-gold: #FFD100;
+  --umd-border-gold: #EAAA00;
+  --umd-dark: #111111;
+  --umd-gray: #666666;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   HEADER / NAVBAR
+   ========================================== */
+.top-bar {
+  height: 6px;
+  background-color: var(--umd-red);
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 40px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 48px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--umd-red);
+  border-radius: 2px;
+  transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-links a:hover {
+  color: var(--umd-red);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+   EXPANDED HERO / VIDEO SECTION
+   ========================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  /* Fills view height so lower content stays hidden until scroll */
+  height: calc(100vh - 84px);
+  min-height: 600px;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-overlay h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* Animated Mouse Scroll Indicator */
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 1.8s infinite;
+}
+
+@keyframes scrollWheel {
+  0% { opacity: 1; top: 8px; }
+  100% { opacity: 0; top: 22px; }
+}
+
+/* Red Section Divider */
+.section-divider {
+  height: 45px;
+  background-color: var(--umd-red);
+  width: 100%;
+}
+
+/* ==========================================
+   INTERACTIVE BY THE NUMBERS SECTION
+   ========================================== */
+.by-the-numbers {
+  padding: 100px 20px 120px 20px;
+  background-color: #ffffff;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 70px;
+}
+
+.numbers-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.numbers-intro p {
+  font-size: 1.05rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.numbers-intro p em {
+  font-family: 'Source Serif Pro', Georgia, serif;
+}
+
+/* Interactive Link Button */
+.learn-more-link {
+  color: var(--umd-red);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+
+.learn-more-link .arrow {
+  transition: transform 0.3s ease;
+}
+
+.learn-more-link:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* Interactive Stat Cards */
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border-left: 4px solid var(--umd-border-gold);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateX(10px) translateY(-2px);
+  border-left-color: var(--umd-red);
+  box-shadow: 0 12px 28px rgba(226, 24, 51, 0.12);
+}
+
+.stat-number-wrapper {
+  display: flex;
+  align-items: baseline;
+  min-width: 100px;
+  font-size: 3.8rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--umd-red);
+  line-height: 0.9;
+}
+
+.stat-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.35;
+}
+
+.stat-source {
+  font-size: 0.85rem;
+  color: var(--umd-gray);
+  margin-top: 6px;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================== */
+@supports (animation-timeline: view()) {
+  .reveal-left {
+    animation: slideInLeft linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+
+  .reveal-right {
+    animation: slideInRight linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Fallback: Ensures section is ALWAYS 100% visible if unsupported */
+.reveal-left,
+.reveal-right {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* ==========================================
+   RESPONSIVE / MOBILE STACKING STYLES
+   ========================================== */
+@media (max-width: 900px) {
+  
+  /* 1. Stack the Navbar Elements */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    flex-direction: column; /* Stacks logo above navigation */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap; /* Allows links to wrap to a second line if tight */
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem; /* Slightly smaller text for compact screens */
+  }
+
+  /* 2. Adjust Hero Section for Smaller Viewports */
+  .hero-section {
+    height: 50vh; /* Reduces video height so users see content below faster */
+    min-height: 350px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  /* 3. Stack "By the Numbers" Section */
+  .by-the-numbers {
+    padding: 50px 20px 60px 20px;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr; /* Switches 2-column grid to a single vertical column */
+    gap: 40px;
+  }
+
+  .numbers-intro h2 {
+    font-size: 2rem;
+  }
+
+  /* 4. Optimize Mobile Stat Cards */
+  .stat-card {
+    flex-direction: column; /* Stacks number above stat text */
+    align-items: flex-start;
+    gap: 8px;
+    padding: 18px 20px;
+  }
+
+  .stat-number-wrapper {
+    font-size: 3rem; /* Slightly smaller stat numbers for mobile screens */
+    min-width: auto;
+  }
+
+  .stat-title {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* ==========================================
+   DESKTOP STYLES (Default)
+   ========================================== */
+.hamburger-btn {
+  display: none; /* Hidden on large screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100;
+}
+
+.hamburger-btn .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #111111;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   MOBILE & SMALL SCREEN STYLES
+   ========================================== */
+@media (max-width: 900px) {
+  .navbar {
+    position: relative;
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    justify-content: space-between; /* Logo on left, Hamburger on right */
+    width: 100%;
+  }
+
+  /* Show Hamburger Button */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* Hide menu words by default & set up slide-down container */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 4px solid var(--umd-red);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Collapsed state */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  /* When Hamburger is clicked -> Menu expands */
+  .nav-menu.open {
+    max-height: 350px; /* Big enough to fit all 5 links */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stacks words vertically */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 25px;
+  }
+
+  .nav-links a {
+    font-size: 1.15rem;
+    display: block;
+    width: 100%;
+  }
+
+  /* Transform Hamburger lines into an "X" when clicked */
+  .hamburger-btn.open .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+    background-color: var(--umd-red);
+  }
+
+  .hamburger-btn.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.open .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+    background-color: var(--umd-red);
+  }
+}
+
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================================
+   EXPLORE MORE & ANIMATED CHEVRON ARROW
+   ========================================== */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 45px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-overlay h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* Scroll Arrow Link Container */
+.scroll-arrow-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  animation: arrowBounce 2s infinite;
+}
+
+/* Sharp CSS Chevron Down Arrow */
+.chevron-arrow {
+  width: 14px;
+  height: 14px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(45deg) translateY(-2px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover & Active Effects */
+.scroll-arrow-link:hover {
+  background: var(--umd-red); /* Fills with UMD Red */
+  border-color: var(--umd-red);
+  transform: translateY(-4px) scale(1.1); /* Lifts up slightly */
+  box-shadow: 0 8px 20px rgba(226, 24, 51, 0.5);
+  animation-play-state: paused; /* Pauses idle bounce on hover */
+}
+
+.scroll-arrow-link:hover .chevron-arrow {
+  border-color: #ffffff;
+  transform: rotate(45deg) translateY(0px);
+}
+
+/* Idle Gentle Bounce Animation */
+@keyframes arrowBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
+
+
+/* ==========================================
+   RED FOOTER SECTION
+   ========================================== */
+.main-footer {
+  background-color: var(--umd-red);
+  color: #ffffff;
+  padding: 60px 20px 40px 20px;
+  border-top: 5px solid var(--umd-gold); /* Classic Maryland Gold accent line */
+  width: 100%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--umd-gold); /* Gold subheadings for quick scannability */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-brand .copyright {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.88;
+  transition: opacity 0.25s ease, padding-left 0.25s ease;
+}
+
+/* Subtle Left-Slide Hover Effect on Links */
+.footer-links a:hover {
+  opacity: 1;
+  padding-left: 6px;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   MOBILE FOOTER STACKING
+   ========================================== */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* 2x2 layout on tablet */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 30px;
+  }
+}
