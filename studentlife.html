@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Life | University of Maryland</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts for Maryland Brand Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Red Accent Line -->
+  <div class="top-bar"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="maryland-logo.webp" alt="University of Maryland Logo">
+      </a>
+
+      <!-- Hamburger Button for Mobile -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="studentlife.html" class="active">Student Life</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="student-life-hero">
+    <!-- Replace src with your hero image when ready -->
+    <div class="hero-img-wrapper">
+      <img src="studentlife.jpg" alt="UMD McKeldin Mall Campus Life" class="hero-bg-img">
+    </div>
+    
+    <div class="hero-content-container">
+      <div class="badge-card">
+        <h1>STUDENT LIFE</h1>
+      </div>
+      
+      <div class="visit-card-wrapper">
+        <a href="#" class="btn-visit">PLAN A VISIT &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- 3-Image Spotlight Gallery -->
+  <section class="spotlight-section">
+    <div class="container">
+      <div class="spotlight-grid">
+        
+        <!-- Image Box 1 -->
+        <div class="gallery-card">
+          <!-- Replace .img-placeholder with <img src="your-image.jpg" alt="..."> -->
+          <div class="img-placeholder">
+            <img src="mckeldin-mall.jpg" alt="McKeldin Mall Campus Tradition">
+          </div>
+          <div class="gallery-overlay">
+            <h3>Campus Tradition</h3>
+            <p>Discover life on McKeldin Mall</p>
+          </div>
+        </div>
+
+        <!-- Image Box 2 -->
+        <div class="gallery-card">
+          <!-- Replace .img-placeholder with <img src="your-image.jpg" alt="..."> -->
+          <div class="img-placeholder">
+            <img src="clubs-culture.jpg" alt="Clubs and Culture">
+          </div>
+          <div class="gallery-overlay">
+            <h3>Clubs & Culture</h3>
+            <p>Join 800+ student organizations</p>
+          </div>
+        </div>
+
+        <!-- Image Box 3 -->
+        <div class="gallery-card">
+          <!-- Replace .img-placeholder with <img src="your-image.jpg" alt="..."> -->
+          <div class="img-placeholder">
+            <img src="terp-spirit.webp" alt="Terp Spirit">
+          </div>
+          <div class="gallery-overlay">
+            <h3>Terp Spirit</h3>
+            <p>Unmatched energy & community</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- Housing Section (Image Left, Content Right) -->
+  <section class="feature-section housing-section">
+    <div class="container feature-grid">
+      
+      <!-- Housing Image Column -->
+      <div class="feature-media">
+  <div class="feature-img-box">
+    <img src="housing.webp" alt="UMD Housing">
+  </div>
+</div>
+
+      <!-- Housing Content Column -->
+      <div class="feature-content">
+        <span class="section-tag">RESIDENCE HALLS & COMMUNITIES</span>
+        <h2>HOUSING</h2>
+        <p class="feature-lead">
+          Your home away from home. From bustling traditional halls on North Campus to suite and apartment-style living in South Campus, UMD offers supportive, vibrant residential communities designed for every Terp.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Living-Learning Programs:</strong> Connect deeply with peers in specialized academic cohorts.</li>
+          <li><strong>24/7 Security & Support:</strong> Dedicated resident assistants and campus support teams.</li>
+          <li><strong>Prime Access:</strong> Live steps away from classrooms, dining halls, and recreation centers.</li>
+        </ul>
+        <a href="#" class="btn-umd-red">Explore Housing Options &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Red Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- Dining Section (Content Left, Image Right) -->
+  <section class="feature-section dining-section">
+    <div class="container feature-grid reverse-mobile">
+      
+      <!-- Dining Content Column -->
+      <div class="feature-content">
+        <span class="section-tag">WORLD-CLASS CAMPUS EATS</span>
+        <h2>DINING</h2>
+        <p class="feature-lead">
+          Fueling your ambition with diverse, sustainable, and flexible dining options across campus. Enjoy unlimited access dining halls, brand-name eateries, food trucks, and cozy cafes.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Anytime Dining Plans:</strong> Unlimited visits to all three major dining halls.</li>
+          <li><strong>Dietary Accommodations:</strong> Robust allergen-aware, halal, kosher, and vegan offerings.</li>
+          <li><strong>Local & Sustainable:</strong> Sourced locally with fresh, farm-to-table ingredients.</li>
+        </ul>
+        <a href="#" class="btn-umd-red">View Dining Plans & Menus &rarr;</a>
+      </div>
+
+      <!-- Dining Image Column -->
+      <div class="feature-media">
+  <div class="feature-img-box">
+    <img src="dining.avif" alt="UMD Dining">
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- Red Footer Section -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      
+      <!-- Column 1: Brand & Address -->
+      <div class="footer-col footer-brand">
+        <h3>UNIVERSITY OF MARYLAND</h3>
+        <p>College Park, MD 20742, USA</p>
+        <p>Phone: 301.405.1000</p>
+        <p class="copyright">&copy; 2026 University of Maryland</p>
+      </div>
+
+      <!-- Column 2: Nav Links -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="student-life.html">Student Life</a></li>
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Resources -->
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Academics</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Athletics</a></li>
+          <li><a href="#">Campus Map</a></li>
+          <li><a href="#">Directory</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Info & Legal -->
+      <div class="footer-col">
+        <h4>Info & Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Web Accessibility</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Emergency Info</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

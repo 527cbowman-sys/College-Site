@@ -665,3 +665,1208 @@ html {
     gap: 30px;
   }
 }
+
+
+/* ==========================================
+   RESET & GLOBAL STYLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+:root {
+  --umd-red: #E21833;
+  --umd-gold: #FFD100;
+  --umd-border-gold: #EAAA00;
+  --umd-dark: #111111;
+  --umd-gray: #666666;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   HEADER & NAVIGATION BAR
+   ========================================== */
+.top-bar {
+  height: 6px;
+  background-color: var(--umd-red);
+}
+
+.navbar {
+  position: relative;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 48px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Animated Left-to-Right Underline */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--umd-red);
+  border-radius: 2px;
+  transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--umd-red);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-btn .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #111111;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   HERO SECTION (PROPERLY FRAMED IMAGE)
+   ========================================== */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 460px;
+  max-height: 620px;
+  background-color: #111111;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%; /* Properly positions mascot & bronze turtle */
+  filter: brightness(0.85);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.category-badge {
+  background-color: var(--umd-red);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  padding: 6px 22px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(226, 24, 51, 0.35);
+  text-transform: uppercase;
+}
+
+.headline-card {
+  background: rgba(226, 24, 51, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 18px 45px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.headline-card h1 {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.scroll-arrow-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.35s ease;
+  animation: arrowBounce 2s infinite;
+}
+
+.chevron-arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.scroll-arrow-link:hover {
+  background: var(--umd-red);
+  border-color: var(--umd-red);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(226, 24, 51, 0.5);
+  animation-play-state: paused;
+}
+
+@keyframes arrowBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(8px); }
+  60% { transform: translateY(4px); }
+}
+
+.section-divider {
+  height: 40px;
+  background-color: var(--umd-red);
+  width: 100%;
+}
+
+/* ==========================================
+   UPGRADED MISSION & IMPACT SECTION
+   ========================================== */
+.mission-section {
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #fdfdfd 0%, #f4f4f6 100%);
+}
+
+.mission-quote-container {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.quote-mark {
+  display: block;
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--umd-red);
+  margin-bottom: -25px;
+}
+
+.mission-quote {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #111111;
+  font-weight: 600;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.impact-card {
+  background: #ffffff;
+  padding: 35px 28px;
+  border-radius: 10px;
+  border-top: 4px solid var(--umd-red);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-top-color 0.35s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-8px);
+  border-top-color: var(--umd-gold);
+  box-shadow: 0 18px 35px rgba(226, 24, 51, 0.12);
+}
+
+.impact-icon {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--umd-red);
+  background: rgba(226, 24, 51, 0.08);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.impact-card h3 {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.impact-card p {
+  font-size: 0.98rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   BY THE NUMBERS SECTION
+   ========================================== */
+.by-the-numbers {
+  padding: 90px 20px 110px 20px;
+  background-color: #ffffff;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 70px;
+}
+
+.numbers-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.numbers-intro p {
+  font-size: 1.05rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.btn-umd-red {
+  display: inline-block;
+  background-color: var(--umd-red);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(226, 24, 51, 0.2);
+}
+
+.btn-umd-red:hover {
+  background-color: #b80f25;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(226, 24, 51, 0.35);
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border-left: 4px solid var(--umd-border-gold);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.3s ease, 
+              border-left-color 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateX(10px) translateY(-2px);
+  border-left-color: var(--umd-red);
+  box-shadow: 0 12px 28px rgba(226, 24, 51, 0.12);
+}
+
+.stat-number-wrapper {
+  display: flex;
+  align-items: baseline;
+  min-width: 140px;
+  font-size: 3.6rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--umd-red);
+  line-height: 0.9;
+}
+
+.stat-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.3;
+}
+
+.stat-source {
+  font-size: 0.85rem;
+  color: var(--umd-gray);
+  margin-top: 4px;
+}
+
+/* ==========================================
+   RED FOOTER SECTION
+   ========================================== */
+.main-footer {
+  background-color: var(--umd-red);
+  color: #ffffff;
+  padding: 60px 20px 40px 20px;
+  border-top: 5px solid var(--umd-gold);
+  width: 100%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--umd-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-brand .copyright {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.88;
+  transition: opacity 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  padding-left: 6px;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVE STACKING FOR SMALL SCREENS
+   ========================================== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 4px solid var(--umd-red);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-menu.open {
+    max-height: 350px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 25px;
+  }
+
+  .hamburger-btn.open .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+    background-color: var(--umd-red);
+  }
+
+  .hamburger-btn.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.open .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+    background-color: var(--umd-red);
+  }
+
+  .about-hero {
+    height: 50vh;
+  }
+
+  .headline-card h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .headline-card {
+    padding: 14px 24px;
+  }
+
+  .mission-quote {
+    font-size: 1.35rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+
+
+/* STUDENTLIFE */
+
+/* ==========================================
+   RESET & GLOBAL STYLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+:root {
+  --umd-red: #E21833;
+  --umd-gold: #FFD100;
+  --umd-border-gold: #EAAA00;
+  --umd-dark: #111111;
+  --umd-gray: #666666;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   HEADER & NAVIGATION BAR
+   ========================================== */
+.top-bar {
+  height: 6px;
+  background-color: var(--umd-red);
+}
+
+.navbar {
+  position: relative;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 48px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--umd-red);
+  border-radius: 2px;
+  transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--umd-red);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-btn .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #111111;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   STUDENT LIFE HERO SECTION
+   ========================================== */
+.student-life-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 450px;
+  background-color: #222222;
+  overflow: hidden;
+}
+
+.hero-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.9);
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.badge-card {
+  align-self: flex-start;
+  background-color: var(--umd-red);
+  padding: 12px 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.badge-card h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.visit-card-wrapper {
+  align-self: flex-end;
+}
+
+.btn-visit {
+  display: inline-block;
+  background-color: var(--umd-red);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 16px 36px;
+  border-radius: 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-visit:hover {
+  background-color: #be122a;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(226, 24, 51, 0.5);
+}
+
+.section-divider {
+  height: 35px;
+  background-color: var(--umd-red);
+  width: 100%;
+}
+
+/* ==========================================
+   PHOTO SPOTLIGHT GALLERY & PLACEHOLDERS
+   ========================================== */
+.spotlight-section {
+  padding: 70px 0;
+  background-color: #f9f9fb;
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background-color: #e2e4e8;
+  aspect-ratio: 4 / 3;
+}
+
+/* Grey Crosshatch Placeholder Style */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #d1d5db;
+  background-image: 
+    linear-gradient(45deg, #c4c9d0 25%, transparent 25%), 
+    linear-gradient(-45deg, #c4c9d0 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #c4c9d0 75%), 
+    linear-gradient(-45deg, transparent 75%, #c4c9d0 75%);
+  background-size: 30px 30px;
+  background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555555;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+  color: #ffffff;
+}
+
+.gallery-overlay h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.gallery-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ==========================================
+   HOUSING & DINING FEATURE SECTIONS
+   ========================================== */
+.feature-section {
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.large-placeholder {
+  min-height: 380px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-tag {
+  color: var(--umd-red);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.feature-content h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #111111;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.feature-lead {
+  font-size: 1.1rem;
+  color: #444444;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.feature-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.feature-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--umd-red);
+  font-weight: 900;
+}
+
+.btn-umd-red {
+  display: inline-block;
+  background-color: var(--umd-red);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(226, 24, 51, 0.25);
+}
+
+.btn-umd-red:hover {
+  background-color: #b80f25;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(226, 24, 51, 0.4);
+}
+
+/* ==========================================
+   RED FOOTER SECTION
+   ========================================== */
+.main-footer {
+  background-color: var(--umd-red);
+  color: #ffffff;
+  padding: 60px 20px 40px 20px;
+  border-top: 5px solid var(--umd-gold);
+  width: 100%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--umd-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-brand .copyright {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.88;
+  transition: opacity 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  padding-left: 6px;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVE STACKING
+   ========================================== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 4px solid var(--umd-red);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-menu.open {
+    max-height: 350px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 25px;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .feature-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .visit-card-wrapper {
+    align-self: center;
+  }
+
+  .badge-card {
+    align-self: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* Ensure all images scale fluidly inside their containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Feature Image Container Sizing */
+.feature-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-img-box {
+  width: 100%;
+  max-width: 520px;       /* Keeps images perfectly proportioned */
+  height: 350px;           /* Sets a balanced fixed height */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Fills the container seamlessly without distortion */
+  object-position: center;
+}
+
+/* Spotlight Gallery Image Fix */
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+
+/* Feature Images (Housing & Dining) */
+.feature-img-box {
+  width: 100%;
+  max-width: 520px;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  
+  /* Add Yellow/Gold Border Here */
+  border: 4px solid #FFD100;
+}
+
+/* Spotlight Gallery Images */
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 4 / 3;
+  
+  /* Add Yellow/Gold Border Here */
+  border: 4px solid #FFD100;
+}

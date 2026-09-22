@@ -92,3 +92,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+
+
+//ABOUT
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Hamburger Menu Toggle
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open');
+    });
+  }
+
+  // Smooth Scroll for Arrow Link
+  const exploreArrow = document.getElementById('explore-arrow');
+  const targetSection = document.getElementById('mission');
+  const navbar = document.querySelector('.navbar');
+
+  if (exploreArrow && targetSection) {
+    exploreArrow.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const navHeight = navbar ? navbar.offsetHeight : 0;
+      const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+
+
+//ABOUT
+
+
