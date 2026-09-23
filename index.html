@@ -5,7 +5,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -14,160 +13,177 @@
         />
         <link href="styles.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     </head>
 <body>
     <div class="top-bar"></div>
 
-  
-<header class="navbar">
-  <div class="nav-container">
-    <a href="#" class="logo">
-      <img src="maryland-logo.webp" alt="University of Maryland Logo">
-    </a>
-
-    <!-- Hamburger Icon (Only visible on small screens) -->
-    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <nav class="nav-menu" id="nav-menu">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="studentlife.html">Student Life</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="getinvolved.html">Get Involved</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-  <section class="hero-section">
-    <video class="hero-video" autoplay loop muted playsinline>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    
-    <div class="hero-overlay">
-      <h2>EXPLORE MORE</h2>
-
-      <a href="#by-the-numbers" class="scroll-arrow-link" id="explore-arrow" aria-label="Scroll to content">
-        <span class="chevron-arrow"></span>
-      </a>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <section class="by-the-numbers" id="by-the-numbers">
-    <div class="container numbers-grid">
-      
-      <div class="numbers-intro reveal-left">
-        <h2>BY THE NUMBERS</h2>
-        <p>
-          By any measure, UMD stands among the preeminent universities in the country. We routinely appear at the top of rankings from <em>U.S. News & World Report</em>, <em>Forbes</em>, The Princeton Review and others. Our own counts—spanning facilities to faculty to Fulbright winners—make it even clearer: Maryland offers more.
-        </p>
-        <a href="#" class="learn-more-link">
-          <span>Learn more</span>
-          <span class="arrow">&rarr;</span>
+    <!-- Header Navigation with Logo & School Name -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="maryland-logo.webp" alt="University of Maryland Logo">
         </a>
+
+        <!-- Hamburger Icon (Only visible on small screens) -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="studentlife.html">Student Life</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="getinvolved.html">Get Involved</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <div class="stats-list">
-        
-        <div class="stat-card reveal-right" style="--delay: 0.1s">
-          <div class="stat-number-wrapper">
-            <span class="stat-prefix">#</span>
-            <span class="stat-number" data-target="10">10</span>
-          </div>
-          <div class="stat-details">
-            <p class="stat-title">among public universities</p>
-            <p class="stat-source">Forbes' America's Top Colleges</p>
-          </div>
-        </div>
-
-        <div class="stat-card reveal-right" style="--delay: 0.25s">
-          <div class="stat-number-wrapper">
-            <span class="stat-number" data-target="69">69</span>
-          </div>
-          <div class="stat-details">
-            <p class="stat-title">colleges, schools and programs ranked in the top 25 nationwide</p>
-            <p class="stat-source">2025 U.S. News & World Report</p>
-          </div>
-        </div>
-
-        <div class="stat-card reveal-right" style="--delay: 0.4s">
-          <div class="stat-number-wrapper">
-            <span class="stat-prefix">#</span>
-            <span class="stat-number" data-target="7">7</span>
-          </div>
-          <div class="stat-details">
-            <p class="stat-title">among U.S. universities for undergraduate entrepreneurship</p>
-            <p class="stat-source">The Princeton Review/Entrepreneurship magazine</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <footer class="main-footer">
-    <div class="container footer-grid">
+    <!-- Hero Section with Recruitment Message & CTA -->
+    <section class="hero-section">
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       
-      <div class="footer-col footer-brand">
-        <h3>UNIVERSITY OF MARYLAND</h3>
-        <p>College Park, MD 20742, USA</p>
-        <p>Phone: 301-405-1000</p>
-      </div>
+      <div class="hero-overlay">
+        <span class="category-badge">UNIVERSITY OF MARYLAND</span>
+        <h1 class="hero-title">FEARLESSLY FORWARD</h1>
+        
+        <!-- Short Recruitment Message -->
+        <p class="hero-recruitment-text">
+          Join a vibrant community of innovators, creators, and leaders shaping the future at Maryland's flagship public research university.
+        </p>
 
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Programs</a></li>
-          <li><a href="#">Student Life</a></li>
-          <li><a href="#">Admissions</a></li>
-          <li><a href="#">Get Involved</a></li>
-        </ul>
-      </div>
+        <!-- Clear Call-To-Action (CTA) Buttons -->
+        <div class="hero-cta-buttons">
+          <a href="admissions.html" class="btn-cta-primary">APPLY NOW &rarr;</a>
+          <a href="programs.html" class="btn-cta-secondary">EXPLORE MAJORS</a>
+        </div>
 
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul class="footer-links">
-          <li><a href="#">Academics</a></li>
-          <li><a href="#">Research</a></li>
-          <li><a href="#">Athletics</a></li>
-          <li><a href="#">Campus Map</a></li>
-          <li><a href="#">Directory</a></li>
-        </ul>
-      </div>
+        <h2>EXPLORE MORE</h2>
 
-      <div class="footer-col">
-        <h4>Info & Legal</h4>
-        <ul class="footer-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Web Accessibility</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Emergency Info</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
+        <a href="#by-the-numbers" class="scroll-arrow-link" id="explore-arrow" aria-label="Scroll to content">
+          <span class="chevron-arrow"></span>
+        </a>
 
-    </div>
-  </footer>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
-        <script src="script.js"></script>
-    </body>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- By The Numbers Section -->
+    <section class="by-the-numbers" id="by-the-numbers">
+      <div class="container numbers-grid">
+        
+        <div class="numbers-intro reveal-left">
+          <h2>BY THE NUMBERS</h2>
+          <p>
+            By any measure, UMD stands among the preeminent universities in the country. We routinely appear at the top of rankings from <em>U.S. News & World Report</em>, <em>Forbes</em>, The Princeton Review and others. Our own counts—spanning facilities to faculty to Fulbright winners—make it even clearer: Maryland offers more.
+          </p>
+          <a href="about.html" class="learn-more-link">
+            <span>Learn more</span>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="stats-list">
+          
+          <div class="stat-card reveal-right" style="--delay: 0.1s">
+            <div class="stat-number-wrapper">
+              <span class="stat-prefix">#</span>
+              <span class="stat-number" data-target="10">10</span>
+            </div>
+            <div class="stat-details">
+              <p class="stat-title">among public universities</p>
+              <p class="stat-source">Forbes' America's Top Colleges</p>
+            </div>
+          </div>
+
+          <div class="stat-card reveal-right" style="--delay: 0.25s">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="69">69</span>
+            </div>
+            <div class="stat-details">
+              <p class="stat-title">colleges, schools and programs ranked in the top 25 nationwide</p>
+              <p class="stat-source">2025 U.S. News & World Report</p>
+            </div>
+          </div>
+
+          <div class="stat-card reveal-right" style="--delay: 0.4s">
+            <div class="stat-number-wrapper">
+              <span class="stat-prefix">#</span>
+              <span class="stat-number" data-target="7">7</span>
+            </div>
+            <div class="stat-details">
+              <p class="stat-title">among U.S. universities for undergraduate entrepreneurship</p>
+              <p class="stat-source">The Princeton Review/Entrepreneurship magazine</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <h3>UNIVERSITY OF MARYLAND</h3>
+          <p>College Park, MD 20742, USA</p>
+          <p>Phone: 301-405-1000</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="studentlife.html">Student Life</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="getinvolved.html">Get Involved</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Athletics</a></li>
+            <li><a href="#">Campus Map</a></li>
+            <li><a href="#">Directory</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Info & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Web Accessibility</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Emergency Info</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -4,32 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | University of Maryland</title>
-  <link rel="stylesheet" href="styles.css">
+  
   <!-- Google Fonts for Maryland Brand Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Top Red Accent Line -->
   <div class="top-bar"></div>
 
-  <!-- Navigation Bar -->
+  <!-- Header Navigation -->
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
         <img src="maryland-logo.webp" alt="University of Maryland Logo">
       </a>
 
-      <!-- Hamburger Button for Mobile -->
-      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation">
+      <!-- Hamburger Icon -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
 
-      <!-- Nav Links -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -43,10 +45,10 @@
     </div>
   </header>
 
-  <!-- Hero Section (Framed Image) -->
+  <!-- Hero Section -->
   <section class="about-hero">
     <div class="hero-img-wrapper">
-      <img src="about.webp" alt="Testudo Mascot with Statue" class="hero-bg-img">
+      <img src="about.webp" alt="Testudo Mascot Statue at UMD" class="hero-bg-img">
     </div>
     
     <div class="hero-content">
@@ -65,15 +67,24 @@
   <!-- Red Divider Line -->
   <div class="section-divider"></div>
 
-  <!-- Upgraded Mission & Impact Section -->
+  <!-- Mission & Overview Section -->
   <section class="mission-section" id="mission">
     <div class="container">
       
+      <!-- Overview & Location Callout -->
+      <div class="overview-box">
+        <span class="section-tag-center text-left">UNIVERSITY OVERVIEW</span>
+        <h2>The State's Flagship Research University</h2>
+        <p>
+          Founded in 1856, the University of Maryland, College Park is a premier public land-grant research university located in College Park, Maryland—just 9 miles from downtown Washington, D.C. As the state’s flagship institution, UMD is home to over 40,000 scholars, world-renowned faculty, and pioneering research centers.
+        </p>
+      </div>
+
       <!-- Featured Quote Banner -->
       <div class="mission-quote-container reveal-left">
         <span class="quote-mark">“</span>
         <p class="mission-quote">
-          One of the nation’s preeminent public research universities, UMD capitalizes on its location just outside a global center of research, policy, tech and culture.
+          One of the nation’s preeminent public research universities, UMD capitalizes on its location just outside a global center of research, policy, tech, and culture.
         </p>
       </div>
 
@@ -82,7 +93,7 @@
         <div class="impact-card reveal-left">
           <div class="impact-icon">01</div>
           <h3>LEARN</h3>
-          <p>Providing exceptional, hands-on educational opportunities across world-class academic disciplines.</p>
+          <p>Providing exceptional, hands-on educational opportunities across 300+ world-class academic disciplines.</p>
         </div>
 
         <div class="impact-card reveal-left">
@@ -104,6 +115,27 @@
   <!-- Red Divider Line -->
   <div class="section-divider"></div>
 
+  <!-- Unique Feature Callout Section -->
+  <section class="unique-section">
+    <div class="container">
+      <div class="unique-card">
+        <div class="unique-content">
+          <span class="section-tag-center text-left" style="color: var(--umd-gold, #FFD100);">WHAT MAKES US UNIQUE</span>
+          <h2>The Legend of Testudo & Terp Traditions</h2>
+          <p>
+            What makes UMD uniquely special is its rich mascot heritage and campus traditions. Our bronze <strong>Testudo statue</strong> outside McKeldin Library isn't just a symbol—it’s a living tradition. During final exams, thousands of students leave offerings ranging from coffee to lucky charms at Testudo's feet and <em>rub his bronze nose for good luck</em>!
+          </p>
+          <p>
+            As Maryland's only NCAA Division I Big Ten Conference university, Terp pride runs through everything we do—from our four-flag university emblem to the unmatched energy inside XFINITY Center.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Divider Line -->
+  <div class="section-divider"></div>
+
   <!-- By The Numbers Section -->
   <section class="by-the-numbers" id="by-the-numbers">
     <div class="container numbers-grid">
@@ -112,7 +144,7 @@
       <div class="numbers-intro reveal-left">
         <h2>BY THE NUMBERS</h2>
         <p>
-          On campus, Terps comprise a vibrant community around the world of scholars, innovators, entrepreneurs, creators and doers. Let's count the ways we stand out.
+          On campus, Terps comprise a vibrant global community of scholars, innovators, entrepreneurs, creators, and doers. Let's count the ways we stand out.
         </p>
         <a href="#" class="btn-umd-red">More facts & rankings &rarr;</a>
       </div>
@@ -126,7 +158,7 @@
             <span class="stat-number">41K+</span>
           </div>
           <div class="stat-details">
-            <p class="stat-title">students</p>
+            <p class="stat-title">Students</p>
             <p class="stat-source">(31K+ undergraduates)</p>
           </div>
         </div>
@@ -137,7 +169,7 @@
             <span class="stat-number">440K</span>
           </div>
           <div class="stat-details">
-            <p class="stat-title">alums</p>
+            <p class="stat-title">Alumni</p>
             <p class="stat-source">Global network of Terps</p>
           </div>
         </div>
@@ -148,7 +180,7 @@
             <span class="stat-number">300+</span>
           </div>
           <div class="stat-details">
-            <p class="stat-title">degree programs</p>
+            <p class="stat-title">Degree Programs</p>
             <p class="stat-source">Across 12 top-tier colleges & schools</p>
           </div>
         </div>
@@ -174,10 +206,10 @@
         <h4>Navigation</h4>
         <ul class="footer-links">
           <li><a href="about.html">About</a></li>
-          <li><a href="#">Programs</a></li>
-          <li><a href="#">Student Life</a></li>
-          <li><a href="#">Admissions</a></li>
-          <li><a href="#">Get Involved</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="studentlife.html">Student Life</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
         </ul>
       </div>
 

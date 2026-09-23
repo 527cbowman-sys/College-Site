@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions & Cost | University of Maryland</title>
+
+  <!-- Google Fonts for Maryland Brand Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Red Accent Line -->
+  <div class="top-bar"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="maryland-logo.webp" alt="University of Maryland Logo">
+      </a>
+
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="studentlife.html">Student Life</a></li>
+          <li><a href="admissions.html" class="active">Admissions</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Admissions Hero Section -->
+  <section class="admissions-hero">
+    <div class="hero-img-wrapper">
+      <img src="admissions.jpg" alt="University of Maryland Campus Architecture" class="hero-bg-img">
+    </div>
+    
+    <div class="hero-content-container">
+      <div class="badge-card">
+        <h1>ADMISSIONS</h1>
+      </div>
+      
+      <div class="visit-card-wrapper">
+        <a href="#" class="btn-visit">APPLY NOW &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- Admissions Expectations (Staggered Red Card Layout) -->
+  <section class="expectations-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-tag-center">WHAT WE LOOK FOR</span>
+        <h2>Admissions Expectations</h2>
+      </div>
+
+      <div class="staggered-grid">
+        
+        <!-- Card 1 -->
+        <div class="staggered-card">
+          <div class="card-num">01</div>
+          <h3>Academic Rigor</h3>
+          <p>We evaluate your high school performance, GPA trends, and the challenge level of your coursework (AP, IB, Honors) to ensure academic readiness.</p>
+        </div>
+
+        <!-- Card 2 (Offset Middle Card) -->
+        <div class="staggered-card middle-card">
+          <div class="card-num">02</div>
+          <h3>Holistic Review</h3>
+          <p>Your application is evaluated as a whole. Letters of recommendation, essay depth, extracurricular involvement, and leadership hold substantial weight.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="staggered-card">
+          <div class="card-num">03</div>
+          <h3>Test-Optional Policy</h3>
+          <p>UMD offers a test-optional path. Applicants can choose whether to submit SAT/ACT scores without facing any disadvantage in holistic review.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- Tuition & Cost Section -->
+  <section class="tuition-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-tag-center">INVEST IN YOUR FUTURE</span>
+        <h2>Tuition & Cost of Attendance</h2>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- In-State Card -->
+        <div class="pricing-card">
+          <span class="pricing-badge">Maryland Resident</span>
+          <h3>In-State Undergraduate</h3>
+          <div class="price-tag">$11,505 <span>/ year</span></div>
+          <ul class="cost-breakdown">
+            <li><span>Tuition & Mandatory Fees</span> <strong>$11,505</strong></li>
+            <li><span>Housing & Dining (Average)</span> <strong>$15,126</strong></li>
+            <li><span>Books & Supplies (Est.)</span> <strong>$1,250</strong></li>
+            <li><span>Estimated Annual Total</span> <strong>$27,881</strong></li>
+          </ul>
+          <a href="#" class="btn-umd-red block-btn">Calculate Your Net Cost &rarr;</a>
+        </div>
+
+        <!-- Out-of-State Card -->
+        <div class="pricing-card featured">
+          <span class="pricing-badge badge-red">Non-Resident</span>
+          <h3>Out-of-State Undergraduate</h3>
+          <div class="price-tag">$40,306 <span>/ year</span></div>
+          <ul class="cost-breakdown">
+            <li><span>Tuition & Mandatory Fees</span> <strong>$40,306</strong></li>
+            <li><span>Housing & Dining (Average)</span> <strong>$15,126</strong></li>
+            <li><span>Books & Supplies (Est.)</span> <strong>$1,250</strong></li>
+            <li><span>Estimated Annual Total</span> <strong>$56,682</strong></li>
+          </ul>
+          <a href="#" class="btn-umd-red block-btn">Calculate Your Net Cost &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- Financial Aid & Scholarships -->
+  <section class="aid-section">
+    <div class="container aid-container">
+      
+      <div class="aid-content">
+        <span class="section-tag-center text-left">AFFORDABILITY</span>
+        <h2>Scholarships & Financial Aid</h2>
+        <p>Over 75% of incoming freshmen receive financial support through merit-based scholarships, need-based grants, work-study programs, or financial assistance.</p>
+
+        <div class="scholarship-pills">
+          <div class="pill-item">
+            <h4>Banneker/Key Scholarship</h4>
+            <p>UMD's most prestigious merit award, covering full tuition, room, board, and a book allowance.</p>
+          </div>
+          <div class="pill-item">
+            <h4>Presidential Scholarships</h4>
+            <p>Merit awards granted to high-achieving freshmen automatically evaluated upon application submission.</p>
+          </div>
+          <div class="pill-item">
+            <h4>Need-Based Grants (FAFSA)</h4>
+            <p>Federal and state aid awarded based on financial need submitted prior to the priority deadline.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="aid-box">
+        <h3>Important Deadlines</h3>
+        <p>Ensure your application and financial aid documents are submitted on time to maximize eligibility.</p>
+        <ul class="deadline-list">
+          <li>
+            <strong>November 1</strong>
+            <span>Early Action Application Deadline (Best consideration for merit awards)</span>
+          </li>
+          <li>
+            <strong>January 1</strong>
+            <span>FAFSA Priority Financial Aid Submission</span>
+          </li>
+          <li>
+            <strong>Regular Decision</strong>
+            <span>January 20 Application Deadline</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Red Footer Section -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      
+      <div class="footer-col footer-brand">
+        <h3>UNIVERSITY OF MARYLAND</h3>
+        <p>College Park, MD 20742, USA</p>
+        <p>Phone: 301.405.1000</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="studentlife.html">Student Life</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Academics</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Athletics</a></li>
+          <li><a href="#">Campus Map</a></li>
+          <li><a href="#">Directory</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Info & Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Web Accessibility</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Emergency Info</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
